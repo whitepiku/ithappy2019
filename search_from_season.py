@@ -20,8 +20,11 @@ elif month in (6,7,8):
     season = "summer"
 elif month in (9,10,11):
     season = "autumn"
-else:
+elif month in (1,2,12):
     season = "winter"
+else:
+    print("there is no season.")
+    season = "none"
 
 #spotify api 文字列検索
 results = spotify.search(q='track:'+season, limit=10,offset=0,market=None)
